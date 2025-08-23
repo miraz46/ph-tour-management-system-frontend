@@ -5,6 +5,10 @@ import axiosBaseQuery from "./axiosBaseQuery";
 export const baseApi = createApi({
   reducerPath: "baseApi",
   baseQuery: axiosBaseQuery(),
-  // baseQuery: fetchBaseQuery({baseUrl: "http://localhost:5000/api/v1"}),
+  //   baseQuery: fetchBaseQuery({
+  //     baseUrl: config.baseUrl,
+  //     credentials: "include",
+  //   }),
+  tagTypes: ["USER"],
   endpoints: () => ({}),
 });
