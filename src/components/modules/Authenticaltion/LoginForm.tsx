@@ -37,13 +37,15 @@ export function LoginForm({
         navigate("/");
       }
     } catch (err) {
-      console.error(err);
+      const error = err as { data?: { message?: string } };
 
-      if (err.data.message === "Password does not match") {
+      console.error(error);
+
+      if (error.data?.message === "Password does not match") {
         toast.error("Invalid credentials");
       }
 
-      if (err.data.message === "User is not verified") {
+      if (error.data?.message === "User is not verified") {
         toast.error("Your account is not verified");
         navigate("/verify", { state: data.email });
       }

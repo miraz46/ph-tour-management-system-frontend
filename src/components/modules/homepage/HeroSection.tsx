@@ -18,8 +18,7 @@ export default function HeroSection() {
     undefined
   );
 
-  const { data: divisionData, isLoading: divisionIsLoading } =
-    useGetDivisionsQuery(undefined);
+  const { data: divisionData } = useGetDivisionsQuery(undefined);
 
   const divisionOption = divisionData?.map(
     (item: { _id: string; name: string }) => ({

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { DeleteConfirmation } from "@/components/DeleteConfirmation";
 import { AddTourTypeModal } from "@/components/modules/Admin/TourType/AddTourModal";
 import { Button } from "@/components/ui/button";
@@ -27,7 +28,7 @@ import { useState } from "react";
 
 export default function AddTourType() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [limit, setLimit] = useState(5);
+  const [limit] = useState(5);
 
   const { data } = useGetTourTypesQuery({ page: currentPage, limit });
   const [removeTourType] = useRemoveTourTypeMutation();

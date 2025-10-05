@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import SingleImageUploader from "@/components/SingleImageUploader";
 import { Button } from "@/components/ui/button";
 import {
@@ -39,7 +40,7 @@ export function AddDivisionModal() {
     },
   });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: any) => {
     const formData = new FormData();
 
     formData.append("data", JSON.stringify(data));
